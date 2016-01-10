@@ -19,6 +19,6 @@ class go::params {
 
   $auto_switch  = true
 
-  $chgo_version = 'v0.1.1'
-  $chgo_source  = 'wfarr/chgo'
+  $chgo_version = 'v0.1.7'
+  $chgo_source  = 'jbcpollak/chgo'
 }
