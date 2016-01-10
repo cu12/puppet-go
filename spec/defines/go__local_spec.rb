@@ -4,7 +4,7 @@ describe "go::local" do
   let(:default_params) do
     {
       :ensure  => "present",
-      :version => "1.1.1"
+      :version => "1.5.2"
     }
   end
 
@@ -13,11 +13,11 @@ describe "go::local" do
   let(:params) { default_params }
 
   it do
-    should include_class("go::1_1_1")
+    should include_class("go::1_5_2")
 
     should contain_file("/path/to/wherever/.go-version").with({
       :ensure  => "present",
-      :content => "1.1.1\n",
+      :content => "1.5.2\n",
       :replace => true
     })
   end
@@ -26,7 +26,7 @@ describe "go::local" do
     let(:params) { default_params.merge(:ensure => "absent") }
 
     it do
-      should_not include_class("go::1_1_1")
+      should_not include_class("go::1_5_2")
 
       should contain_file("/path/to/wherever/.go-version").with({
         :ensure => "absent"
