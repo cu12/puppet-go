@@ -12,8 +12,8 @@ describe "go" do
     should contain_boxen__env_script("go")
 
     should contain_repository("/test/boxen/chgo").with({
-      :ensure => "v0.1.0",
-      :source => "wfarr/chgo",
+      :ensure => "v0.1.7",
+      :source => "jbcpollak/chgo",
       :user   => "testuser"
     })
   end
